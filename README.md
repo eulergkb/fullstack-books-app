@@ -1,4 +1,5 @@
 # Books Application
+![Screenshot 2023-09-22 152100](https://github.com/eulergkb/fullstack-books-app/assets/145793447/37905f14-db40-4c43-9ae1-de26d697e5fb)
 
 ### Features
 - Authentication / User registration / SignOut
@@ -25,6 +26,7 @@
 - Proceed to register a new user account by enter your `username` , `first name` , `last name` and `password`.
 - After registering you'll be redirected to the `dashboard` page where you can `add` , `delete` , `update` and see all created notes
 
+![Screenshot 2023-09-22 152039](https://github.com/eulergkb/fullstack-books-app/assets/145793447/c2749d7d-46b6-418e-bce6-44a78f49e225)
 
 ### How to run application (Local Development)
 - Clone repository using above technique
@@ -44,3 +46,5 @@
 #### NOTE: This can be run locally after running the application locally
 - Make sure application is running gracefully on your local environment
 - In the root directory, run the command `yarn run test:e2e`
+![Screenshot 2023-09-22 154721](https://github.com/eulergkb/fullstack-books-app/assets/145793447/0e6eca2c-5bbd-4f5b-8937-cb84a4daaca1)
+
