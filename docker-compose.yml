@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  db:
+    container_name: mssql-server
+    image: mcr.microsoft.com/mssql/server:latest
+    ports:
+      - "1433:1433"
+    command: /entrypoint.sh
+    volumes:
+      - ./scripts/setup-database.sh:/setup-database.sh
+      - ./scripts/db-init.sql:/db-init.sql
+      - ./scripts/entrypoint.sh:/entrypoint.sh
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Tywoon123"
+    networks:
+      - default
+
+  backend:
+    container_name: "server"
+    restart: always
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - default
+
+  frontend:
+    container_name: "frontend"
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+networks:
+  default:
+    name: "app-network"
+    driver: "bridge"

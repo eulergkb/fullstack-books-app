@@ -1,0 +1,12 @@
+{
+  "plugins": ["prettier", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "prettier/prettier": "error",
+    "max-len": ["error",{ "tabWidth": 8 }],
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ]
+}
